@@ -1,0 +1,95 @@
+Array should always be sorted.
+1. First and last position of element in a sorted array.
+{
+    First position of element, search in left and store the value of index in a variable
+    Last position of element, search in right and store the value of index in a variable
+}
+2. Find the total number of occurence
+{
+    Find the first and last occurence of elements
+    Last occurence - First occurence + 1
+}
+3. Find peak in mountain array
+{
+    Here the function is not completely sorted, instead it is in a mountain shape.
+    Lines follow a relation arr[i]<arr[i+1] whereas the next slope follows the relation arr[i+1]<arr[i]
+    Peak follows a relation too.
+}
+4. Find the pivot element of the array. 
+{
+    Applied to rotated and sorted array.
+    We have two monotonic function.
+    arr[mid] >= arr[0] represents the line one of the monotonic functions.
+    s = mid + 1;
+    else: represents the line two
+    e = mid;
+}
+5. Search in a sorted rotated array
+{
+    Same concept as pivot element.
+    For the first line: arr[0]<=target<=arr[pivot-1]
+    For the second line: arr[pivot]<=target<=arr[n-1]
+}
+6. Square root using binary search
+{
+    Range in which the answer might lie is termed as search space.
+    Root(n) exists between 0 to n.
+    It is a sorted monotonic function, hence we can apply binary search.
+    Find mid numbers and check the squares.
+}
+7. Find the float part in square root
+{
+    Find the integer part in the search space using binary search.
+    Create a new function termed as incrementPrecision.
+    Increment the precision part by part and check whether the square is less than the number till it crosses the value.
+    Break the loop and return the last entered value of answer.
+}
+8. Book allocation problem 
+{
+    Create a search space of all the elements between min and max.
+    Assign the min to 0 and max to the sum of all elements in the array.
+    Find the value of mid and check whether mid is a possible solution or not.
+    It can be checked by the value of students: 
+    Hence for students:
+    1. 10+20 < 50
+    2. 30 < 50
+    3. 40 < 50
+    But we only have two students and we have to allot 40 to the third. Hence, 50 is not a solution.
+    Thus, we increment the start to mid + 1.
+
+    Now, our search space is between 51 and 100, mid = 75.
+    1: 10+20+30 < 75
+    2: 40 < 75
+    Is a possible solution. Thus, all values at right will be sols. 
+    Update end to mid - 1.
+
+    Search space: 51 - 74
+    Mid: 62
+    1. 10+20+30 < 62
+    2. 40 < 62
+    Possible solution. 
+
+    End: mid - 1
+    Search space: 51 - 61
+    Mid: 56
+    Is not a possible solution. 
+    Update start to mid + 1
+
+    Start = mid + 1
+    Search space: 57 - 61
+    Mid: 59
+    Not a possible solution.
+
+    Start = mid + 1
+    Search space: 60 - 61
+    Possible solution. 
+
+    Now we leave the while loop. 
+
+    return ans;
+    ans = 60;
+}
+9. Painter's partition problem
+{
+
+}
