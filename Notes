@@ -1,1 +1,13 @@
 Implementation of cout is different for character and integer arrays.
+
+Memory allocation of arrays occurs in stack memory.
+
+New keyword can be used to allocate memory in heap for the array during runtime.
+
+It is used for dynamic memory allocation for arrays.
+
+Heap does not allow naming of allocated memory.
+int* arr = new int[10];
+char* ch = new char;
+Named pointers will be created in the stack memory area.
+
